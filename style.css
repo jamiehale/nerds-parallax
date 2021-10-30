@@ -1,0 +1,94 @@
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 10px;
+  perspective: 10px;
+  background-color: tomato;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.parallax__layer--middle {
+  -webkit-transform: translateZ(-3px) scale(1.42);
+  transform: translateZ(-3px) scale(1.7);
+}
+
+.parallax__layer--back {
+  -webkit-transform: translateZ(-6px) scale(2.5);
+  transform: translateZ(-6px) scale(2.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 100%/1.5 Arial;
+}
+
+.parallax {
+  font-size: 200%;
+}
+
+/* add some padding to force scrollbars */
+.parallax__layer {
+  /* padding: 50vh 0; */
+}
+
+/* centre the content in the parallax layers */
+.title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: flex-end;
+}
+
+.title > img {
+  /*  border: 1px solid white; */
+}
+
+img.foreground {
+  width: 10vw;
+}
+
+img.middle {
+  width: 10vw;
+}
+
+img.background {
+  width: 10vw;
+}
+
+.after {
+  margin-top: 100vh;
+  height: 100vh;
+  width: 100%;
+  background-color: lightgreen;
+}
+
+.afterafter {
+  height: 100vh;
+  width: 100%;
+}
+
+.saon {
+  width: 40vw;
+  margin-left: 20px;
+  margin-bottom: -12px;
+}
